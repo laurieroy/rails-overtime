@@ -22,7 +22,7 @@ Needs to document if employee did not log OT
 
 ### DB: postgres
 ### UI: Bootstrap
-### Testing: Rspec and capybara
+### Testing: Rspec, capybara, FactoryBot
 
 
 

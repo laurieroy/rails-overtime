@@ -8,3 +8,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'bootstrap/dist/css/bootstrap';
+
+@media print {
+    body {
+        zoom: .8
+    }
+}

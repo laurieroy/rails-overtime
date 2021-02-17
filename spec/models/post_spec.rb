@@ -5,7 +5,7 @@ RSpec.describe Post, type: :model do
     before do
       user = User.create(email: "test@test.com", password: "password", 
         password_confirmation: "password", first_name: "test", last_name: "tester" )
-      @post = Post.create(date: Date.today, rationale: "Because", user_id: user.id)
+      @post = Post.create!(date: Date.today, rationale: "Because", user_id: user.id)
     end
 
     it 'can be created' do

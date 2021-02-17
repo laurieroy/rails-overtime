@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: %i[show edit update] #  destroy
+	before_action :set_post, only: %i[show edit update destroy]
 	def index
 		@posts = Post.all
 	end
@@ -23,7 +23,6 @@ class PostsController < ApplicationController
 	end
 
 	def edit
-
 	end
 
 	def update
@@ -34,7 +33,10 @@ class PostsController < ApplicationController
 		end
 	end
 
-
+	def destroy
+		@post.destroy
+		redirect_to posts_path, notice: "Your post was deleted successfully"
+	end
 
 	private
 	def post_params

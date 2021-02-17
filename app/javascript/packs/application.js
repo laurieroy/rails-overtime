@@ -13,5 +13,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "bootstrap"
-
-import "../stylesheets/application";
+import "jquery"
+// import "../stylesheets/application";

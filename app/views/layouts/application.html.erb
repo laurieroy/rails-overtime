@@ -10,8 +10,31 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body>
+    <header>
+      <%= render "shared/nav" %>
+    </header>
+    <main role="main">
+ 
+      <%
+=begin%>
+ <section class="jumbotron text-center">
+        <div class="container">
+          <h1></h1>
+          <p class="lead text-muted"></p>
+        </div>
+      </section> 
+<%
+=end%>
+       
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <%= yield %>
+          </div>
 
-  <body class="container">
-    <%= yield %>
+        </div>
+      </div>
+   </main>
   </body>
 </html>

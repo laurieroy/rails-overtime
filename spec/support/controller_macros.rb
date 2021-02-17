@@ -1,4 +1,4 @@
-module ControllerMacros
+# module ControllerMacros
 #   def login_user
 #     # Before each test, create and login the user
 #     before(:each) do
@@ -15,4 +15,4 @@ module ControllerMacros
   #     sign_in FactoryBot.create(:admin) # Using factory bot as an example
   #   end
   # end
-end
+# end

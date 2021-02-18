@@ -1,5 +1,9 @@
 <%= form_with(model: @post, class: "form-horizontal", role: "form", local: true) do |f| %>
-  <%= @post.errors.inspect %>
+  <% if @post.errors.any? %>
+    <%  @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
   <div class= "form-group">
     <%= f.label :date, class: "col-sm-2" %>
       <div class="col-sm-10">  

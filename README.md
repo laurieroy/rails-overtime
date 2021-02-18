@@ -18,10 +18,11 @@ Needs to document if employee did not log OT
 * TDD/BDD in rails
 * Use warden to sign in for feature test
 * Skip registration in Devise
+* Use the administrate gem
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
-
+- Lock down admin paths
 
 ### Testing: Rspec, Capybara, FactoryBot
 

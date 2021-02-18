@@ -15,3 +15,11 @@ ActiveStorage.start()
 import "bootstrap"
 import "jquery"
 // import "../stylesheets/application";
+
+$(document).ready(function(){
+	setTimeout(() => {
+		$('#notice_wrapper').fadeOut("slow", function(){
+			$(this).remove();
+		})
+	}, (7500));
+});

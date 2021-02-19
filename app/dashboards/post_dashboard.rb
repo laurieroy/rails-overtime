@@ -8,9 +8,9 @@ class PostDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    user: Field::BelongsTo,
+    user: Field::BelongsTo.with_options(searchable: true),
     id: Field::Number,
-    date: Field::Date,
+    date: Field::Date.with_options(searchable: true),
     rationale: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -32,7 +32,6 @@ class PostDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   user
-  id
   date
   rationale
   created_at

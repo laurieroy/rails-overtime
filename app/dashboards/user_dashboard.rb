@@ -9,7 +9,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     posts: Field::HasMany,
-    id: Field::Number,
+    id: Field::Number.with_options(searchable: true),
     email: Field::String,
     password: Field::String,
     sign_in_count: Field::Number,
@@ -40,7 +40,6 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   posts
-  id
   email
   sign_in_count
   current_sign_in_at

@@ -22,7 +22,7 @@ Needs to document if employee did not log OT
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
-- Lock down admin paths
+- Rector posts/_form for admin user with status
 
 ### Testing: Rspec, Capybara, FactoryBot
 

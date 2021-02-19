@@ -1,36 +1,44 @@
 <div class="logo container">
   <h1>Time Tracker</h1>
 </div>
-<div class="container">
-  <nav class="custom-nav navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item <%= active?(root_path) %>">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item <%= active?(posts_path) %>">
-            <%= link_to "Time Entry", posts_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item <%= active?(posts_path) %>">
-            <%= link_to "Add New Entry", new_post_path, id: "new_post_from_nav", class: "nav-link" %>
-          </li>
-        </ul>
+<!-- TODO -->
+<% if current_user %>
+  <div class="container">
+    <nav class="custom-nav navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item <%= active?(root_path) %>">
+              <%= link_to "Home", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item <%= active?(posts_path) %>">
+              <%= link_to "Time Entry", posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item <%= active?(posts_path) %>">
+              <%= link_to "Add New Entry", new_post_path, id: "new_post_from_nav", class: "nav-link" %>
+            </li>
+          </ul>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-              role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Profile
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "TODO-Admin Dashboard", root_path, class: "dropdown-item" %>
-              <div class="divider"></div> 
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        </ul>
-   
-    </div>
-  </nav>
-</div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Options
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <!-- TODO -->
+                <% if current_user.try(:type) == 'AdminUser' %>
+                  <%= link_to "Admin Dashboard", admin_root_path, class: "dropdown-item" %>
+                  <div class="divider"></div> 
+                <% end %>
+                 <!-- TODO -->
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              </div>
+            </li>
+          </ul>
+    
+      </div>
+    </nav>
+  </div>
+<% end %>
+<!-- TODO -->

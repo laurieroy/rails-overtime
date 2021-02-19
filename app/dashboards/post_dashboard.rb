@@ -14,6 +14,8 @@ class PostDashboard < Administrate::BaseDashboard
     rationale: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    status: Field::Select.with_options(searchable: true,
+      collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys })
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,7 +25,7 @@ class PostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
   user
-  id
+  status
   date
   rationale
   ].freeze
@@ -32,6 +34,7 @@ class PostDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   user
+  status
   date
   rationale
   created_at
@@ -45,6 +48,7 @@ class PostDashboard < Administrate::BaseDashboard
   user
   date
   rationale
+  status
   ].freeze
 
   # COLLECTION_FILTERS

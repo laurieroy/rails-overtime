@@ -8,28 +8,30 @@ Company needs documentation whether salaried employees worked overtime each week
 * User: using devise with admin
 
 ## Features:
-Admin approves workflow
-SMS sending with link to OT input
-Admin dashboard
-Email summary to managers for approval
-Needs to document if employee did not log OT
+Admin approves workflow |
+SMS sending with link to OT input |
+Admin dashboard |
+Email summary to managers for approval |
+Needs to document if employee did not log OT |
 
 ## New to me:
 * TDD/BDD in rails
 * Use warden to sign in for feature test
 * Skip registration in Devise
-* Use the administrate gem
+* Use the administrate gem for an admin dashboard
+* Use the pundit gem for permissions
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
 - Rector posts/_form for admin user with status
-- admin check on nav
+- Fix admin check on nav
+- Fix posts.spec, posts in factory (not define user there)
 
 ### Testing: Rspec, Capybara, FactoryBot
 
 ### He uses Growl notifications, which was recently retired. I'm using JS for now, will add in something later
 
-Uses: Ruby 2.6.3, Rails: 6.1.2, PG: 13.1, BS: 4.6, Font Awesome
+Uses: Ruby 2.6.3, Rails: 6.1.2, PostgresSql: 13.1, BS: 4.6, Font Awesome
 
 Devise for auth
 Pundit 2.1 for permissions

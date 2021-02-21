@@ -3,8 +3,6 @@ require 'rails_helper'
 describe 'navigate' do
 	before do
 		@user = FactoryBot.create(:user)
-		# @user = FactoryBot.create_with(attributes_for(:user)).find_or_create_by(id: 1)
-		# login_user
 		login_as(@user, :scope => :user)
 	end
 
@@ -27,6 +25,15 @@ describe 'navigate' do
       visit posts_path
       expect(page).to have_content(/Rationale|Other/)
 		end
+
+		it 'has a scope that allows only post creators to see the post' do
+			post1 = FactoryBot.build_stubbed(:post)
+			post2 = FactoryBot.build_stubbed(:second_post)
+			post_from_another_user = FactoryBot.build_stubbed(:post_from_another_user)
+		
+			expect(page).to_not have_content(/"should not see this"/)
+			byebug
+		end
 	end
 
 	describe 'new' do
@@ -39,7 +46,7 @@ describe 'navigate' do
 
 	describe 'delete' do
 		before do
-			@post = FactoryBot.create(:post)
+			@post = FactoryBot.build(:post)
 		end
 
 		it 'can be deleted' do

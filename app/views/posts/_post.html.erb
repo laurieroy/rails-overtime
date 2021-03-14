@@ -3,7 +3,9 @@
 			<td><%= post.date %></td>
 			<td><%= post.user.name.sorted.upcase %></td>
 			<td><%= truncate(post.rationale) %></td>
-			<td><%= post.status %></td>
+			<td>
+				<%= status_badge post.status %>
+			</td>
 			<td><%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}" %></td>
 			<td><%= link_to "Delete", 
 						post_path(post), 

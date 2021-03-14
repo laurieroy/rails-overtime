@@ -18,3 +18,4 @@ FactoryBot.define do
 		user { FactoryBot.create(:nonauthorized_user) }
 	end	
 end
+

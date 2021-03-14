@@ -27,14 +27,20 @@ describe 'navigate' do
 		end
 
 		it 'has a scope that allows only post creators to see the post' do
-			post1 = FactoryBot.build_stubbed(:post)
-			post2 = FactoryBot.build_stubbed(:second_post)
+			# post1 = FactoryBot.build_stubbed(:post)
+			# post2 = FactoryBot.build_stubbed(:second_post)
+			post1 = Post.create(date: Date.today, rationale: "Because", user_id: @user.id)
+			post2 = Post.create(date: Date.today, rationale: "Because", user_id: @user.id)
 			post_from_another_user = FactoryBot.build_stubbed(:post_from_another_user)
-		
+
 			expect(page).to_not have_content(/"should not see this"/)
-			byebug
 		end
 	end
+
+	nonauthorized_user = User.create(first_name: "NonAuthorized", last_name: "User", 
+		email: "nonauthorized@example.com",password: "password",
+		password_confirmation: "password")
+
 
 	describe 'new' do
 		it 'has a link from the homepage' do
@@ -46,7 +52,9 @@ describe 'navigate' do
 
 	describe 'delete' do
 		before do
-			@post = FactoryBot.build(:post)
+			@post = FactoryBot.create(:post)
+			# TODO refactor
+			@post.update(user_id: @user.id)
 		end
 
 		it 'can be deleted' do
@@ -61,7 +69,7 @@ describe 'navigate' do
 			visit new_post_path
 		end
 
-		it 'has a form that can be reached' do
+		it 'has a new form that can be reached' do
 			expect(page.status_code).to eq(200)
 		end
 

@@ -4,6 +4,9 @@
 			<td><%= post.user.name.sorted.upcase %></td>
 			<td><%= truncate(post.rationale) %></td>
 			<td><%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}" %></td>
-			<td><%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?"},
-				id: "delete_post_#{post.id}_from_index" %></td>
+			<td><%= link_to "Delete", 
+						post_path(post), 
+						method: :delete, data: { confirm: "Are you sure?"},
+						id: "delete_post_#{post.id}_from_index" %>
+			</td>
 		</tr>

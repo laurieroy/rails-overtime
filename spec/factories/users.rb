@@ -4,7 +4,6 @@ FactoryBot.define do
 	end
 
 	factory :user do
-		# id {1}
 		first_name { "Test" }
 		last_name  { "Tester" }	
     email { generate :email }
@@ -13,7 +12,6 @@ FactoryBot.define do
 	end
 
 	factory :admin_user, class: "AdminUser" do
-		# id {2}
 		first_name { "Admin" }
 		last_name  { "User" }
     email { generate :email }
@@ -22,7 +20,6 @@ FactoryBot.define do
 	end
 
 	factory :nonauthorized_user, class: "User" do
-		# id {2}
 		first_name { "NonAuthorized" }
 		last_name  { "User" }
     email { generate :email }

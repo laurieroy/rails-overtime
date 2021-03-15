@@ -3,11 +3,13 @@ FactoryBot.define do
 	factory :post do
 		date  { Date.today }
 		rationale { "Some Rationale" }
+		overtime_request { 2.5 }
 		user { create(:user)} 
 	end
 	
 	factory :second_post, class: Post do
 		date  { Date.yesterday }
+		overtime_request { 0.5 }
 		rationale { "Some Other Rationale" }
 		user 
 	end

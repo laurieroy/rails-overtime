@@ -1,5 +1,5 @@
 @user = User.create(email: "test@test.com", password: "password", 
-	password_confirmation: "password", first_name: "test", last_name: "tester", overtime_request: 2.5 )
+	password_confirmation: "password", first_name: "test", last_name: "tester")
 puts "1 user created"
 
 AdminUser.create(email: "laurieroy.dev@gmail.com", password: "password", 

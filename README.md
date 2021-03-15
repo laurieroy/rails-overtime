@@ -25,6 +25,7 @@ Needs to document if employee did not log OT |
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
 - Rector posts/_form for admin user with status
+- Fix bootstrap tables in chrome
 - Fix admin check on nav
 - Fix posts.spec, posts in factory (not define user there)
 - Fix using update in del test (temp get around current_user) 

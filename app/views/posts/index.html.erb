@@ -1,19 +1,22 @@
 <h1 class="mt-2">Posts</h1>
-
-<table class="table table-striped table-hover">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>Overtime requested</th>
-			<th>Date</th>
-			<th>User</th>
-			<th>Rationale</th>
-			<th>Status</th>
-			<th></th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		<%= render @posts %>
-	</tbody>
-</table>
+<div class="row">
+	<div class="column">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Overtime requested</th>
+					<th scope="col">Date</th>
+					<th scope="col">User</th>
+					<th scope="col">Rationale</th>
+					<th scope="col">Status</th>
+					<th scope="col"></th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<%= render @posts %>
+			</tbody>
+		</table>
+	</div>
+</div>

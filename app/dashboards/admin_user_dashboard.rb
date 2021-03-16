@@ -20,6 +20,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     first_name: Field::String,
     last_name: Field::String,
     type: Field::String,
+    phone: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -41,6 +42,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   posts
   id
   email
+  phone
   sign_in_count
   current_sign_in_at
   last_sign_in_at
@@ -62,6 +64,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   first_name
   last_name
   type
+  phone
   ].freeze
 
   # COLLECTION_FILTERS

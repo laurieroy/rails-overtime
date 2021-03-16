@@ -21,14 +21,15 @@ Needs to document if employee did not log OT |
 * Skip registration in Devise
 * Use the administrate gem for an admin dashboard
 * Use the pundit gem for permissions
+* Send text using Twilio API
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
 - Rector posts/_form for admin user with status
-- Fix bootstrap tables in chrome
+- Fix bootstrap tables in chrome (cols)
 - Fix admin check on nav
-- Fix posts.spec, posts in factory (not define user there)
-- Fix using update in del test (temp get around current_user) 
+- Edit icon
+
 
 ### Testing: Rspec, Capybara, FactoryBot 6
 

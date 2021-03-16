@@ -20,6 +20,7 @@ class UserDashboard < Administrate::BaseDashboard
     first_name: Field::String,
     last_name: Field::String,
     type: Field::String,
+    phone: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -41,6 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
   posts
   email
+  phone
   sign_in_count
   current_sign_in_at
   last_sign_in_at
@@ -61,6 +63,7 @@ class UserDashboard < Administrate::BaseDashboard
   password
   first_name
   last_name
+  phone
   ].freeze
 
   # COLLECTION_FILTERS

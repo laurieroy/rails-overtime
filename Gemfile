@@ -68,4 +68,6 @@ gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootst
 gem 'font-awesome-sass', '~> 5.13'
 gem 'hirb', '~> 0.7.3'
 gem 'name_of_person', '~> 1.1'
+gem 'phonelib'
 gem 'pundit', '~> 2.1'
+gem 'twilio-ruby', '~> 5.49'

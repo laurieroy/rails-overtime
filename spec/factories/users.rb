@@ -9,6 +9,7 @@ FactoryBot.define do
     email { generate :email }
 		password {"password"}
 		password_confirmation {"password"}
+		phone {"9713195769"}
 	end
 
 	factory :admin_user, class: "AdminUser" do
@@ -17,6 +18,7 @@ FactoryBot.define do
     email { generate :email }
 		password {"password"}
 		password_confirmation {"password"}
+		phone {"9713195769"}
 	end
 
 	factory :nonauthorized_user, class: "User" do
@@ -25,5 +27,6 @@ FactoryBot.define do
     email { generate :email }
 		password {"password"}
 		password_confirmation {"password"}
+		phone {"9713195769"}
 	end
 end

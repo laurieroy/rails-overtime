@@ -40,7 +40,7 @@ describe 'navigate' do
 
 	nonauthorized_user = User.create(first_name: "NonAuthorized", last_name: "User", 
 		email: "nonauthorized@example.com",password: "password",
-		password_confirmation: "password")
+		password_confirmation: "password", phone: "9713195769")
 
 
 	describe 'new' do

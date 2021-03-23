@@ -1,5 +1,6 @@
 # Overtime App
-This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. It is a code-along that was originally filmed in Jul 2016, so is a bit dated. 
+This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There is a background job that sends out SMS messages via Twilio.
+ 
 
 ## Requirements:
 A company needs documentation whether salaried employees worked overtime each week

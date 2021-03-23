@@ -34,6 +34,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   posts
   id
   email
+  type
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -50,9 +51,9 @@ class AdminUserDashboard < Administrate::BaseDashboard
   last_sign_in_ip
   first_name
   last_name
-  type
   created_at
   updated_at
+  type
   ].freeze
 
   # FORM_ATTRIBUTES

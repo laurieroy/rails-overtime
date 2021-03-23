@@ -50,9 +50,9 @@ class UserDashboard < Administrate::BaseDashboard
   last_sign_in_ip
   first_name
   last_name
-  type
   created_at
   updated_at
+  type
   ].freeze
 
   # FORM_ATTRIBUTES

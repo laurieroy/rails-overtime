@@ -14,10 +14,12 @@
 					<th scope="col"></th>
 				</tr>
 			</thead>
-			<tbody>
-				<%= render @posts, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+			<tbody id="posts">
+				<%= render @posts %>
 			</tbody>
 		</table>
-		<%= paginate @posts %>
+		<div class="container pagination justify-content-center" id="paginator" >
+			<%= paginate @posts, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm", remote: true %>
+		</div>
 	</div>
 </div>

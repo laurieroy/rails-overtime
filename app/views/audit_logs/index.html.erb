@@ -11,12 +11,12 @@
 					<th scope="col">Status</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="al">
 				<%= render @audit_logs %>
 			</tbody>
 		</table>
-		<div class="container pagination justify-content-center" >
-			<%= paginate @audit_logs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+		<div class="container pagination justify-content-center" id="paginator-al" >
+			<%= paginate @audit_logs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm", remote: true  %>
 		</div>
 	</div>
 </div>

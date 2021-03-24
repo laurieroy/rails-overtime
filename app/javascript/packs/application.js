@@ -15,6 +15,10 @@ ActiveStorage.start()
 import "bootstrap"
 import "jquery"
 // import "../stylesheets/application";
+import "./application"
+
+window.jQuery = $
+window.$ = $
 
 $(document).ready(function(){
 	setTimeout(() => {

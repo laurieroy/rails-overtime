@@ -15,8 +15,9 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%= render @posts %>
+				<%= render @posts, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
 			</tbody>
 		</table>
+		<%= paginate @posts %>
 	</div>
 </div>

@@ -1,6 +1,7 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  resources :audit_logs
+  resources :audit_logs, except: [:new, :edit, :destroy]
+
   namespace :admin do
       resources :posts
       resources :users

@@ -18,8 +18,8 @@
 				<%= render @posts %>
 			</tbody>
 		</table>
-		<div class="container pagination justify-content-center" id="paginator" >
-			<%= paginate @posts, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm", remote: true %>
-		</div>
+			<div class="d-flex justify-content-center mt-4">
+				<%== pagy_bootstrap_nav(@pagy ) %>
+			</div>
 	</div>
 </div>

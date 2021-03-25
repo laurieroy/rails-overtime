@@ -1,6 +1,6 @@
 class AuditLogsController < ApplicationController
 	def index
-		@audit_logs = AuditLog.page(params[:page]).per(10)
+		@pagy, @audit_logs = pagy(AuditLog.all, items: 10)
 		authorize @audit_logs
 	end
 

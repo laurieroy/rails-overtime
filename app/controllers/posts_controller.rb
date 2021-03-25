@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	before_action :set_post, only: %i[show edit update destroy]
 	def index
-		@posts = Post.posts_by(current_user).page(params[:page]).per(10)
+		@pagy, @posts = pagy(Post.posts_by(current_user), items: 10)
 	end
 
 	def show

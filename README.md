@@ -23,6 +23,7 @@ Needs to document if employee did not log OT |
 * Use the administrate gem for an admin dashboard
 * Use the pundit gem for permissions
 * Send text using Twilio API
+* == outputs raw
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec

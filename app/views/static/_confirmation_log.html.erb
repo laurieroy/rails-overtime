@@ -1,0 +1,21 @@
+<% recent_audit_items.each do |ra| %>
+	<div class="homepage-block col-md-3">
+		<h4>
+			<%= ra.user.name.sorted  %>
+		</h4>
+		<p><span class="pending-details">
+				Week Starting: <%= ra.start_date %>
+			</span></p>
+		<p>
+			<span class="pending-details">
+				Confirmed at: <%= ra.end_date || (status_badge 'pending') %>
+			</span>
+		</p>
+		<p>
+			<span class="pending-details">
+				Status: <%= status_badge ra.status %>
+			</span>
+		</p>
+
+	</div>
+<% end %>

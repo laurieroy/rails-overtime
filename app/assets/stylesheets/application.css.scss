@@ -1,4 +1,7 @@
 @import "posts.scss";
+@import "admin_homepage.scss";
+@import "employee_homepage.scss";
+@import "audit_logs.scss";
 // imported BS in JS so webpack handles it. see if it works
 // these are from excid3's template, see how they look
 // $navbar-default-bg: #312312;

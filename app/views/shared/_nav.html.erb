@@ -20,7 +20,7 @@
 =end%>
             <%= render 'shared/audit_log' if policy(AuditLog).index? %>
             <li class="nav-item <%= active?(posts_path) %>">
-              <%= link_to "Add New Entry", new_post_path, id: "new_post_from_nav", class: "nav-link" %>
+              <%= link_to "Request Overtime", new_post_path, id: "new_post_from_nav", class: "nav-link" %>
             </li>
           </ul>
 

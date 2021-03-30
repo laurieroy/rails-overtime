@@ -31,6 +31,10 @@ Needs to document if employee did not log OT |
 - Fix bootstrap tables in chrome (cols)
 - Fix admin check on nav
 - Edit icon
+- Block styling
+- Move admin types to initializer
+- Fix scope in static conroller
+- Refactor admin policy (shorten)
 
 
 ### Testing: Rspec, Capybara, FactoryBot 6

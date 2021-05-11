@@ -3,18 +3,18 @@ This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There
  
 
 ## Requirements:
-A company needs documentation whether salaried employees worked overtime each week
+A company needs to document whether salaried employees worked overtime each week
 
 ## Models: 
 * Post: date, rationale
 * User: using devise with admin
 
 ## Features:
-Admin approves workflow |
-SMS sending with link to OT input |
-Admin dashboard |
-Email summary to managers for approval |
-Needs to document if employee did not log OT |
+Admin approves workflow | 
+sends SMS with link for employee to input OT | 
+Admin dashboard | 
+Email summary to managers for approval | 
+Needs to document if employee did not log OT | 
 
 ## New to me:
 * TDD/BDD in rails
@@ -50,5 +50,5 @@ Upgrades:  name_of_person instead of custom model method,
 Figure out breaking changes in growl notification, Factory Bot, enums in adminstrate,
 Originally used STI for admin,
 
-This app was built in Feb 2021 as a code along by [Jordan Hudgens](https://www.udemy.com/course/professional-ruby-on-rails-coding-course/learn/lecture/5529548#overview). Although I've done systems testing before, I'm not sure of how much unit testing to include, and hoped this course would help answer that. The code along is Rails 4, but I'm using Rails 6. Hopefully not too many breaking changes. 
+This app was built in Feb and May 2021 as a code along by [Jordan Hudgens](https://www.udemy.com/course/professional-ruby-on-rails-coding-course/learn/lecture/5529548#overview). Although I've done systems testing before, I'm not sure of how much unit testing to include, and hoped this course would help answer that. The code along is Rails 4, but I'm using Rails 6. Hopefully not too many breaking changes. 
 

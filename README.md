@@ -36,6 +36,8 @@ Needs to document if employee did not log OT |
 - Fix scope in static conroller
 - Refactor admin policy (shorten)
 
+- add cal button to show month for user to see when check dates
+
 
 ### Testing: Rspec, Capybara, FactoryBot 6
 

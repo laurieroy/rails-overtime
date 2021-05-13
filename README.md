@@ -1,4 +1,5 @@
 # Overtime App
+[demo](https://laurie-overtime.herokuapp.com/users/sign_in)
 This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There is a background job that sends out SMS messages via Twilio.
  
 
@@ -35,6 +36,7 @@ Needs to document if employee did not log OT |
 - Move admin types to initializer
 - Fix scope in static conroller
 - Refactor admin policy (shorten)
+- Update end_date when confirmed
 
 - add cal button to show month for user to see when check dates
 

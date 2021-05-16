@@ -1,22 +1,22 @@
 <div class="container-fluid">
-  <div class="pending-homepage row">
-		<div class="col-md-12">
-			<h2>Items Pending Your Approval</h2>
-		</div>
-		<hr>
-		<%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
+  <div class="pending-homepage bg-light row">
+    <div class="col-md-12">
+      <h2 class="mt-2">Items Pending Your Approval</h2>
+    </div>
+    <hr>
+    <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
   </div>
 
   <div class="pending-homepage">
-		<div class="col-md-12">
-			<h2>Confirmation Log</h2>
-		</div>
-		<hr>
-		<%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
+    <div class="col-md-12">
+      <h2>Confirmation Log</h2>
+    </div>
+    <hr>
+    <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
 
-			<hr>
-			
-			<%= link_to "View All Items", audit_logs_path, class: "btn btn-primary" %>
+    <hr>
+
+    <%= link_to "View All Items", audit_logs_path, class: "btn btn-primary" %>
 
   </div>
 </div>

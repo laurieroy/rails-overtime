@@ -7,7 +7,7 @@ This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There
 ## Requirements:
 A company needs to document whether salaried employees worked overtime each week
 
-Managers receive this email link to a list of pending OT requests. These will be viewed on a desktop.
+Managers receive an email link to a list of pending OT requests. These will be viewed on a desktop.
 Employees will mostly receive notifications via phone so sending by text.
 
 ## Models: 
@@ -27,11 +27,12 @@ Needs to document if employee did not log OT |
 * Skip registration in Devise
 * Use the administrate gem for an admin dashboard
 * Use Single-Table Inheritance pattern (STI) for admin, employee as types of user
+	* Add self-referential assoc: manager has many employees(hands)
 * Use the pundit gem for permissions
 * Send text using Twilio API
 * == outputs raw
-* honeybadger
-* new relic
+* Honeybadger (reviewed, did not implement)
+* New Relic
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
@@ -39,6 +40,7 @@ Needs to document if employee did not log OT |
 - Fix bootstrap tables in chrome (cols)
 - Edit icon
 - Block styling
+- Upgrade email from sendgrid to google
 
 - Add name to navbar
 - Add cal button to show month for user to see when check dates

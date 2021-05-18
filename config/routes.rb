@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-      resources :posts
-      resources :users
-      resources :admin_users
+    resources :admin_users
+    resources :posts
+    resources :users
+    resources :employees
 
-      root to: "posts#index"
-    end
+    root to: "posts#index"
+  end
     
   resources :posts do
     member do

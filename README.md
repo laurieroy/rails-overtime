@@ -26,6 +26,7 @@ Needs to document if employee did not log OT |
 * Use Warden to mimic signing in for feature test
 * Skip registration in Devise
 * Use the administrate gem for an admin dashboard
+* Use Single-Table Inheritance pattern (STI) for admin, employee as types of user
 * Use the pundit gem for permissions
 * Send text using Twilio API
 * == outputs raw
@@ -41,11 +42,11 @@ Needs to document if employee did not log OT |
 
 - Add name to navbar
 - Add cal button to show month for user to see when check dates
-
+<!-- He uses STI, I'm using polymorphic (i think it's been a while. confirm if all is still good...) -->
 
 ### Testing: Rspec, Capybara, FactoryBot 6
 
-### He uses Gritter/Growl notifications, which was recently retired. I'm using JS for now, will add in something later
+### He uses Gritter/Growl notifications, which was recently retired. I'm using JS for now. He also used SendGrid for Heroku messages. I will attempt google.
 
 Uses: Ruby 2.6.3, Rails: 6.1.2, PostgresSql: 13.1, BS: 4.6, Font Awesome
 
@@ -54,7 +55,7 @@ Pundit 2.1 for permissions
 
 Upgrades:  name_of_person instead of custom model method, 
 Figure out breaking changes in growl notification, Factory Bot, enums in adminstrate,
-Originally used STI for admin, used polymorphic
+
 
 This app was built in Feb and May 2021 as a code along by [Jordan Hudgens](https://www.udemy.com/course/professional-ruby-on-rails-coding-course/learn/lecture/5529548#overview). Although I've done systems testing before, I'm not sure of how much unit testing to include, and hoped this course would help answer that. The code along is Rails 4, but I built it using Rails 6. Hopefully not too many breaking changes as I go along. 
 

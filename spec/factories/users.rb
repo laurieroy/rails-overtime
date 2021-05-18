@@ -22,7 +22,7 @@ FactoryBot.define do
 		password_confirmation {"password"}
 		company {"xyz"}
 		phone {"9713195769"}
-		ssn {"1234"}
+		ssn {1234}
 	end
 
 	factory :nonauthorized_user, class: "User" do
@@ -33,6 +33,6 @@ FactoryBot.define do
 		password_confirmation {"password"}
 		company {"xyz"}
 		phone {"9713195769"}
-		ssn {"1234"}
+		ssn {1234}
 	end
 end

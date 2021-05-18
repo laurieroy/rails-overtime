@@ -3,7 +3,9 @@
 										password_confirmation: "password",
 										first_name: "test", 
 										last_name: "tester",
-										phone: "9713195769")
+										phone: "9713195769",
+										ssn: 1234,
+										company: "ABC company")
 puts "1 user created"
 
 AdminUser.create(email: "laurieroy.dev@gmail.com", 
@@ -11,7 +13,9 @@ AdminUser.create(email: "laurieroy.dev@gmail.com",
 								password_confirmation: "password", 
 								first_name: "Laurie", 
 								last_name: "Roy",
-								phone: "9713195769" )
+								phone: "9713195769",
+								ssn: 1234,
+								company: "ABC company")
 puts "1 admin user created"
 
 AuditLog.create(

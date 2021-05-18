@@ -10,6 +10,10 @@ A company needs to document whether salaried employees worked overtime each week
 Managers receive an email link to a list of pending OT requests. These will be viewed on a desktop.
 Employees will mostly receive notifications via phone so sending by text.
 
+The company liked the MVP well enough to add more features: all employees will track all hours, so a text will be sent daily. 
+
+This company only has about 1000 employees, but some with the same first and last name. The last four of the SSN will be used to differentiate these employees. Since this is a code-along, I am following the company requirements as presented.
+
 ## Models: 
 * Post: date, rationale
 * User: using devise with admin

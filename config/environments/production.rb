@@ -68,7 +68,7 @@ Rails.application.configure do
   # following tut, need to read up on
   config.action_mailer.perform_caching = true
 
-  config.action_mailer.default_url_options = { :host => 'laurie-overtime.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'laurie-overtime.herokuapp.com', :protocol => 'https' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

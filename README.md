@@ -5,14 +5,14 @@ This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There
 
 
 ## Requirements:
-A company needs to document whether salaried employees worked overtime each week
+A company needs to document whether salaried employees worked overtime each week:
 
 Managers receive an email link to a list of pending OT requests. These will be viewed on a desktop.
 Employees will mostly receive notifications via phone so sending by text.
 
-The company liked the MVP well enough to add more features: all employees will track all hours, so a text will be sent daily. 
+Update: The company liked the MVP well enough to add more features: all employees will track all hours, so a text will be sent daily. 
 
-This company only has about 1000 employees, but some with the same first and last name. The last four of the SSN will be used to differentiate these employees. Since this is a code-along, I am following the company requirements as presented.
+This company only has about 1000 employees, but some with the same first and last name. The last four of the SSN will be used to differentiate these employees. Since this is a code-along, I am following with the company requirements as presented.
 
 ## Models: 
 * Post: date, rationale
@@ -52,9 +52,12 @@ Needs to document if employee did not log OT |
 
 ### Testing: Rspec, Capybara, FactoryBot 6
 
+
 ### He uses Gritter/Growl notifications, which was recently retired. I'm using JS for now. He also used SendGrid for Heroku messages. I will attempt google.
 
+
 Uses: Ruby 2.6.3, Rails: 6.1.2, PostgresSql: 13.1, BS: 4.6, Font Awesome
+
 
 Devise for auth | 
 Pundit 2.1 for permissions

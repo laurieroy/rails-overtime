@@ -8,7 +8,7 @@ This is an enterprise app built using RSpec and Capybara, TDD/BDD methods. There
 A company needs to document whether salaried employees worked overtime each week:
 
 Managers receive an email link to a list of pending OT requests. These will be viewed on a desktop.
-Employees will mostly receive notifications via phone so sending by text.
+Employees will mostly receive notifications via phone, so sending a reminder by text is optimal.
 
 Update: The company liked the MVP well enough to add more features: all employees will track all hours, so a text will be sent daily. 
 
@@ -35,7 +35,7 @@ Needs to document if employee did not log OT |
 * Use the pundit gem for permissions
 * Send text using Twilio API
 * == outputs raw
-* Honeybadger (reviewed, did not implement)
+* Honeybadger (reviewed, todo: implement)
 * New Relic
 
 ## Refactor TODOS:
@@ -68,3 +68,32 @@ Figure out breaking changes in growl notification, Factory Bot, enums in adminst
 
 This app was built in Feb and May 2021 as a code along by [Jordan Hudgens](https://www.udemy.com/course/professional-ruby-on-rails-coding-course/learn/lecture/5529548#overview). Although I've done systems testing before, I'm not sure of how much unit testing to include, and hoped this course would help answer that. The code along is Rails 4, but I built it using Rails 6. Hopefully not too many breaking changes as I go along. 
 
+Update some of the front-end to React: Aug 21
+
+<!-- getting the rvm error i'd gotten before but need internet so i'll come back to this -->
+<!-- do a migration
+rails g migration add_daily_hours_to_posts
+in file: rename_column :posts, :overtime_request, :daily_hours
+rake db:migrate
+check in scheme
+do a search for overtime_request, examine each instead of fine/replace
+add 12.5 to seeds
+8.0 and 12.5  to factory
+update test info hours
+
+in nav, change req ot to "Submit hours"
+post index, --> 
+
+<!-- Hours
+
+post show page: hours worked
+resolve #x in commit msg
+create new issue: swap out rationale for work_performed
+(same method as above) -->
+
+
+
+
+
+
+ -->
